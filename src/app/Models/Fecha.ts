@@ -6,5 +6,5 @@ export class Fecha {
   cantChicos!: number;
   valor!: number;
   estaReservada!: boolean;
-  mailRerserva!:String;
+  mailReserva!:String;
 }
