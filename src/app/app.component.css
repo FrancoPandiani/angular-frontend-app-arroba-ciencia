@@ -1,0 +1,13 @@
+.fondo {
+  background-image: url("/assets/imagenes/AC_FONDO.jpg");
+  background-position: center;
+}
+.container {
+  height: 100%;
+  width: 66vw;
+  min-width: 300px;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}

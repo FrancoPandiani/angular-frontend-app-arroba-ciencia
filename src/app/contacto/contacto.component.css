@@ -1,0 +1,12 @@
+.form-control.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+.form-control.ng-touched.ng-valid {
+  border: 1px solid green;
+}
+.bposition {
+  margin-top: 20px;
+}
+.reposition {
+  margin-bottom: 100px;
+}

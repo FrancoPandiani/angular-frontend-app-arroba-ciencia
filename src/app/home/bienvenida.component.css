@@ -1,0 +1,26 @@
+.fondo {
+  background-image: url(/assets/imagenes/AC11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 4px rgb(0, 0, 0);
+
+  margin: auto;
+}
+.descripcion {
+  margin-top: 30px;
+}
+.p-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background-color: black;
+  opacity: 0.5;
+  margin-bottom: 100px;
+  margin-top: 50px;
+}

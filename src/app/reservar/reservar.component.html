@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="card-header"><h3>Fecha Seleccionada</h3></div>
+
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Mes</th>
+          <th>Año</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+      <tr>
+        <td>{{ fecha.dia }}</td>
+        <td>{{ fecha.mes }}</td>
+        <td>{{ fecha.anio }}</td>
+      </tr>
+    </table>
+    <div>
+      <form [formGroup]="exform" (submit)="enviarData()">
+        <div class="form-group">
+          <label class="col-form-label">Nombre</label>
+          <input formControlName="nombre" type="text" class="form-control" />
+          <small *ngIf="nombre?.invalid && nombre?.touched" class="text-danger"
+            >El nombre es obligatorio</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="col-form-label">Email:</label>
+          <input formControlName="email" type="text" class="form-control" />
+          <small *ngIf="email?.invalid && email?.touched" class="text-danger"
+            >El email es obligatorio</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label class="col-form-label">Cantidad de niños</label>
+          <input
+            formControlName="cantChicos"
+            type="number"
+            class="form-control"
+          />
+          <small
+            *ngIf="cantChicos?.invalid && consulta?.touched"
+            class="text-danger"
+          >
+            la cantidad minima de niños es : 1</small
+          >
+        </div>
+
+        <button
+          [disabled]="exform.invalid"
+          type="submit"
+          class="btn btn-warning reposition"
+        >
+          Reservar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
