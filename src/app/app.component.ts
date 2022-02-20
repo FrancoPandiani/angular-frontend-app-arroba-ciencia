@@ -9,10 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'arrobacienciaFront';
 
-  // agregado para poder hacer la conexion con la bd
   constructor(private router: Router) {}
 
-  Listar() {
-    this.router.navigate(['eventos']);
-  }
+
 }
