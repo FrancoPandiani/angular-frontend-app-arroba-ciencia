@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'eventos', component: EventosComponent },
   { path: 'reservar', component: ReservarComponent },
   { path: 'bienvenida', component: BienvenidaComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'bienvenida' },
+  { path: '**', pathMatch: 'full', redirectTo: 'bienvenida' }
 ];
 
 @NgModule({
