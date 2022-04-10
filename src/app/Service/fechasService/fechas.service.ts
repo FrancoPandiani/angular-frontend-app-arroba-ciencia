@@ -11,15 +11,25 @@ export class FechasserviceService {
 
   constructor(private http: HttpClient) {}
 
-  urlFechas = `${this.baseUrl}fechas`;
+  urlFechas = `${this.baseUrl}api/eventos`;
 
   getFechas() {
-    return this.http.get<Fecha[]>(this.urlFechas);
+    const headers = new HttpHeaders()
+    //.set('Origin', 'http://localhost:4200')
+   // .set('Access-Control-Allow-Origin', '*')
+  //.set("Access-Control-Request-Method",'GET') 
+ //.set("Access-Control-Request-Headers",'authorization')  
+  //.set('authorization', 'Basic am9zZTEyMzpsYWxhbGE=');
+    //.set('Host', 'localhost:8080');
+    return this.http.get<Fecha[]>(this.urlFechas,{headers});
   }
+
   guardarFecha(ObjFecha: any, idFecha: number) {
     const url = `${this.urlFechas}/${idFecha}`;
     const headers = new HttpHeaders()
-    .set('Origin', 'http://localhost:4200');
+    //.set('Origin', 'http://localhost:4200')
+    //.set('Access-Control-Allow-Origin', '*');
+    //.set('authorization', 'Basic am9zZTEyMzpsYWxhbGE=');
     const body = { ObjFecha };
     return this.http.post<any>(url, body);
   }

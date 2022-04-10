@@ -29,7 +29,7 @@ export class ReservarComponent implements OnInit {
         Validators.email,
         Validators.maxLength(50),
       ]),
-      cantChicos: new FormControl('', [Validators.required, Validators.min(1)]),
+      kidsAmount: new FormControl('', [Validators.required, Validators.min(1)]),
     });
   }
   enviarData() {
@@ -55,6 +55,6 @@ export class ReservarComponent implements OnInit {
     return this.exform.get('consulta');
   }
   get cantChicos() {
-    return this.exform.get('cantChicos');
+    return this.exform.get('kidsAmount');
   }
 }
